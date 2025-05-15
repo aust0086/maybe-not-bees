@@ -1,0 +1,237 @@
+body,
+html {
+    height: 100%;
+    background-color: #f6cd00;
+}
+
+/* The hero image */
+.hero-image {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: linear-gradient(#caa308);
+
+    /* Set a specific height */
+    height: 90%;
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* Place text in the middle of the image */
+h1 {
+    font-size: 3em;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+    left: 40%;
+    color: black;
+}
+
+.content {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.content ul {
+    list-style-type: none;
+}
+
+/* styleing content */
+#offer {
+    padding: 10px;
+    font-size: 1.2em;
+    background-color: #F6E000;
+    border: 5px solid #caa308;
+    margin: 10px;
+}
+
+#how {
+    padding: 10px;
+    font-size: 1.2em;
+    background-color: #F6E000;
+    border: 5px solid #caa308;
+    margin: 10px;
+}
+
+#price {
+    /* text-align: center; */
+    padding: 10px;
+    font-size: 1.2em;
+    background-color: #F6E000;
+    border: 5px solid #caa308;
+}
+
+.prices {
+    align-items: center;
+}
+.bees{
+    padding:10px;
+    border: 5px solid #caa308;
+    margin-bottom: 5px;
+}
+.wasps{
+    padding:10px;
+    border: 5px solid #caa308;
+}
+
+/* grid for sections */
+.content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+        "offer how"
+        "price price";
+}
+
+.content:nth-child(1) {
+    grid-area: offer;
+}
+
+.content:nth-child(2) {
+    grid-area: how;
+}
+
+.content:nth-child(3) {
+    grid-area: price;
+
+}
+
+/* Bee Anamation, please see read me for more infomation */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.bee-float {
+    height: 31.25em;
+    width: 31.25em;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    animation: fly 4s infinite;
+}
+
+@keyframes fly {
+    50% {
+        transform: translateY(-3.12em);
+    }
+}
+
+.bee {
+    height: 7.5em;
+    width: 12.5em;
+    background: linear-gradient(to right,
+            #f4c13d 30%,
+            #0d323e 30%,
+            #0d323e 45%,
+            #f4c13d 45%,
+            #f4c13d 55%,
+            #0d323e 55%,
+            #0d323e 70%,
+            #f4c13d 70%,
+            #f4c13d 80%,
+            #0d323e 80%);
+    border-radius: 5em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    box-shadow: inset 0 -1.56em rgba(0, 0, 0, 0.15);
+}
+
+.bee:before {
+    position: absolute;
+    content: "";
+    height: 0.87em;
+    width: 0.87em;
+    background-color: #0d323e;
+    border-radius: 50%;
+    top: 3.43em;
+    left: 1.25em;
+}
+
+.bee:after {
+    position: absolute;
+    content: "";
+    height: 0.31em;
+    width: 1.87em;
+    background-color: #0d323e;
+    border-radius: 0.31em;
+    top: 3.43em;
+    left: 11.87em;
+}
+
+.wings {
+    position: absolute;
+    height: 5em;
+    width: 5em;
+    background-color: #ea92b9;
+    border-radius: 5em 5em 0 5em;
+    top: 7.5em;
+    left: 11.25em;
+}
+
+.wings:before {
+    position: absolute;
+    content: "";
+    height: 5em;
+    width: 5em;
+    background-color: #ea92b9;
+    border-radius: 5em 5em 5em 0;
+    left: 4.68em;
+}
+
+.wings:after {
+    height: 3.75em;
+    width: 3.75em;
+    position: absolute;
+    content: "";
+    box-shadow: -0.62em -0.62em #f2c7c9;
+    border-radius: 50%;
+    top: 1.12em;
+    left: 1.12em;
+}
+
+.shine {
+    position: absolute;
+    height: 1.25em;
+    width: 7.5em;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 1.25em;
+    top: 1.25em;
+    left: 3.12em;
+}
+
+.shine:before {
+    position: absolute;
+    content: "";
+    height: 3.12em;
+    width: 0.93em;
+    background-color: #0b2b35;
+    border-radius: 0.93em;
+    transform: rotate(-30deg);
+    top: 4.68em;
+    left: 1.87em;
+    box-shadow: 2.5em 1.25em #0b2b35;
+}
+
+@media screen and (min-width: 700px) {
+    .bee-float {
+        font-size: 1.2em;
+    }
+}
