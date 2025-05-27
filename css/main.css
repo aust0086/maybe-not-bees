@@ -6,8 +6,8 @@ html {
 
 /* The hero image */
 .hero-image {
-    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-    background-image: linear-gradient(#caa308);
+    margin-top: 10px;
+    background-color: #f6cd00;
 
     /* Set a specific height */
     height: 90%;
@@ -53,6 +53,9 @@ h1 {
     background-color: #F6E000;
     border: 5px solid #caa308;
     margin: 10px;
+    width: fit-content;
+    height: fit-content;
+    padding-bottom: 10px;
 }
 
 #how {
@@ -61,37 +64,43 @@ h1 {
     background-color: #F6E000;
     border: 5px solid #caa308;
     margin: 10px;
+    width: fit-content;
+    height: fit-content;
 }
 
 #price {
-    /* text-align: center; */
     padding: 10px;
     font-size: 1.2em;
     background-color: #F6E000;
     border: 5px solid #caa308;
+    width: fit-content;
+    height: fit-content;
+     
+    position: absolute;
+    left: 20%;
+
 }
 
-.prices {
-    align-items: center;
-}
-.bees{
-    padding:10px;
+.bees {
+    padding: 10px;
     border: 5px solid #caa308;
     margin-bottom: 5px;
 }
-.wasps{
-    padding:10px;
+
+.wasps {
+    padding: 10px;
     border: 5px solid #caa308;
 }
 
 /* grid for sections */
 .content {
     display: grid;
+    row-gap:20px;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     grid-template-areas:
-        "offer how"
-        "price price";
+        "offer how";
+        
 }
 
 .content:nth-child(1) {
@@ -102,9 +111,10 @@ h1 {
     grid-area: how;
 }
 
-.content:nth-child(3) {
-    grid-area: price;
 
+
+.hero-image {
+    margin-top: 5px;
 }
 
 /* Bee Anamation, please see read me for more infomation */
